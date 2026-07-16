@@ -1,0 +1,36 @@
+name: Report a correction
+description: Flag an inaccurate measurement, compatibility note, evidence label, or retailer destination.
+title: "Correction: "
+labels:
+  - correction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep Small-Space Setup Lab accurate. Do not include private account, order, address, or payment information.
+  - type: input
+    id: page
+    attributes:
+      label: Affected page
+      description: Paste the Small-Space Setup Lab URL that needs correction.
+      placeholder: https://small-space-setup-lab.pages.dev/products/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is inaccurate?
+      description: State the current claim and the correction you recommend.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Supporting source
+      description: Link to a manufacturer, retailer, or other primary source when available.
+      placeholder: https://...
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add reproducible details without sharing private information.
